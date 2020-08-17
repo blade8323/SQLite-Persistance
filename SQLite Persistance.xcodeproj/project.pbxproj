@@ -13,6 +13,7 @@
 		8498D63B24EAA4BF00A4BE96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8498D63924EAA4BF00A4BE96 /* Main.storyboard */; };
 		8498D63D24EAA4C500A4BE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8498D63C24EAA4C500A4BE96 /* Assets.xcassets */; };
 		8498D64024EAA4C500A4BE96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8498D63E24EAA4C500A4BE96 /* LaunchScreen.storyboard */; };
+		8498D64924EAB16C00A4BE96 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8498D64824EAB16B00A4BE96 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		8498D63C24EAA4C500A4BE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8498D63F24EAA4C500A4BE96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8498D64124EAA4C500A4BE96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8498D64824EAB16B00A4BE96 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8498D64A24EAB20100A4BE96 /* SQLite Persistance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite Persistance-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8498D64924EAB16C00A4BE96 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				8498D63224EAA4BE00A4BE96 /* SQLite Persistance */,
 				8498D63124EAA4BE00A4BE96 /* Products */,
+				8498D64724EAB16B00A4BE96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +68,17 @@
 				8498D63C24EAA4C500A4BE96 /* Assets.xcassets */,
 				8498D63E24EAA4C500A4BE96 /* LaunchScreen.storyboard */,
 				8498D64124EAA4C500A4BE96 /* Info.plist */,
+				8498D64A24EAB20100A4BE96 /* SQLite Persistance-Bridging-Header.h */,
 			);
 			path = "SQLite Persistance";
+			sourceTree = "<group>";
+		};
+		8498D64724EAB16B00A4BE96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8498D64824EAB16B00A4BE96 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +113,7 @@
 				TargetAttributes = {
 					8498D62F24EAA4BE00A4BE96 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -284,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JX58TZDTX7;
 				INFOPLIST_FILE = "SQLite Persistance/Info.plist";
@@ -293,6 +309,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.IBS.SQLite-Persistance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite Persistance/SQLite Persistance-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JX58TZDTX7;
 				INFOPLIST_FILE = "SQLite Persistance/Info.plist";
@@ -311,6 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.IBS.SQLite-Persistance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite Persistance/SQLite Persistance-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
